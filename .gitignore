@@ -1,0 +1,10 @@
+/secrets/
+
+**/node_modules/
+
+**/db_data/
+**/webgl_logs/
+**/auth_logs/
+**/nginx_logs/
+
+.DS_Store

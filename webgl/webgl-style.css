@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+/*
+body {
+    background:
+    url('Download/spider.png')
+      no-repeat center center fixed,
+    linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background-size: cover;
+}
+  */
+
+body {
+  background: url('img/spider.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  padding: 6px;
+  border-radius: 4px;
+  transition: background 0.2s ease-in-out;
+}
+
+.logout-btn i {
+  color: #ffffff;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.logout-btn:hover i {
+  color: #868686;
+  transform: scale(1.2);
+}

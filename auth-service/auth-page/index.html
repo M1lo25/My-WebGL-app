@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Accedi</h2>
+    <form id="loginForm" action="/auth/login" method="POST" novalidate>
+      <div class="field-group">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          pattern="^[\w.+-]+@?[\w-]*\.[\w.-]+$|^[A-Za-z0-9_]{3,}$"
+          title="Inserisci un username valido (min. 3 caratteri)."
+        />
+        <div class="error-message" id="userError"></div>
+      </div>
+
+      <div class="field-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="6"
+          title="La password deve avere almeno 6 caratteri."
+        />
+        <span class="toggle-password" id="togglePassword">
+          <i class="fas fa-eye"></i>
+        </span>
+        <div class="error-message" id="passError"></div>
+      </div>
+
+      <button type="submit">Entra</button>
+      <div class="error-message" id="serverError" hidden></div>
+    </form>
+
+    <p class="register-link">
+      Non hai un account? <a>Registrati</a>
+    </p>
+
+    <div class="oauth-buttons">
+      <button id="googleLogin" class="oauth-btn">Accedi con Google</button>
+      <button id="fbLogin" class="oauth-btn">Accedi con Facebook</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

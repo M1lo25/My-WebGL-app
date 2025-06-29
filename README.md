@@ -14,12 +14,30 @@ A lightweight Docker setup to serve a Unity WebGL build via Apache, protected by
    echo "your-session-secret"  > secrets/session_secret.txt
    ```
 
-2. **Build & run**
+2. **Database Initialization**
+Add the following to your `db_init/init.sql` to create the **Test** user:
+```sql
+INSERT INTO utenti (username, password_hash)
+VALUES ('Test', SHA2('Test1', 256));
+```
+MySQL will execute this script **only** when the db_data volume is empty.
+
+
+2.1 **Resetting the Database**
+To force re-execution of your updated `init.sql`, teardown and recreate the volume:
+```sql
+docker-compose down --volumes
+docker-compose up -d
+```
+This will remove and recreate the `db_data` volume, causing MySQL to run your `init.sql` on startup.
+
+
+3. **Build & run**
   ```bash
   docker-compose up --build
   ```
 
-3. **Stop & clean**
+4. **Stop & clean**
   ```bash
   docker-compose down
   ```

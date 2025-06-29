@@ -1,4 +1,3 @@
-// --- Toggle 'Mostra/Nascondi password' ---
 const pwdInput = document.getElementById('password');
 const toggle = document.getElementById('togglePassword');
 toggle.addEventListener('click', () => {
@@ -9,7 +8,6 @@ toggle.addEventListener('click', () => {
     : '<i class="fas fa-eye-slash"></i>';
 });
 
-// --- Validazione client-side ---
 const form = document.getElementById('loginForm');
 form.addEventListener('submit', e => {
   let valid = true;
@@ -18,13 +16,11 @@ form.addEventListener('submit', e => {
   const serverErr = document.getElementById('serverError');
   serverErr.hidden = true;
 
-  // Username/email
   const user = document.getElementById('username');
   if (!user.checkValidity()) {
     document.getElementById('userError').textContent = user.title;
     valid = false;
   }
-  // Password
   const pass = document.getElementById('password');
   if (!pass.checkValidity()) {
     document.getElementById('passError').textContent = pass.title;
@@ -34,7 +30,6 @@ form.addEventListener('submit', e => {
   if (!valid) e.preventDefault();
 });
 
-// --- Messaggi d'errore server-side via query string ---
 window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   if (params.has('error')) {

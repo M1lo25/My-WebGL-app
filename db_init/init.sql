@@ -6,8 +6,4 @@ CREATE TABLE utenti (
 );
 
 INSERT INTO utenti (username, password_hash)
-VALUES ('pippo', SHA2('Greta123', 256));
-
-SELECT id, username, password_hash, created_at
-FROM utenti
-WHERE username = 'pippo';
+VALUES ('test', SHA2('Gianluca', 256));

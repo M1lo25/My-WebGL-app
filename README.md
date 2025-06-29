@@ -23,7 +23,7 @@ VALUES ('Test', SHA2('Test1', 256));
 MySQL will execute this script **only** when the db_data volume is empty.
 
 
-2.1 **Resetting the Database**
+1. **Resetting the Database**
 To force re-execution of your updated `init.sql`, teardown and recreate the volume:
 ```sql
 docker-compose down --volumes

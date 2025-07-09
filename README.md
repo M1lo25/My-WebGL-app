@@ -62,3 +62,20 @@ A lightweight Docker setup to serve a Unity WebGL build via Apache, protected by
   - `db_data`
   - `nginx_logs`
   - `auth_logs`
+
+ ## Sources 
+
+- [Persisting container data](https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/)  
+
+- [Docker secrets as environment variables](https://stackoverflow.com/questions/52492359/docker-secrets-passing-as-environment-variable)  
+
+- [Docker Compose](https://docs.docker.com/compose/)  
+
+- [Networking in Compose](https://docs.docker.com/compose/how-tos/networking/)  
+
+- [10 Best Practices to Containerize Node.js Web Applications](https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/)  
+
+- [Nginx Reverse Proxy with Docker](https://idroot.us/nginx-reverse-proxy-docker/)  
+
+- [Unity WebGL Docker Example](https://gist.github.com/tomowatt/e287ed5bf1047fbaffb8f5c588eaef66)  
+
